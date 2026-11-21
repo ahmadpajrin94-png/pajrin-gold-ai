@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09130f">
+<title>PAJRIN GOLD AI</title>
+<style>
+:root{--bg:#09130f;--panel:#12231a;--panel2:#172b20;--line:#2c4938;--txt:#eef8f1;--muted:#9bb4a4;--green:#42df9b;--red:#ff727b;--gold:#e8c66d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1b3829,var(--bg) 56%);color:var(--txt);font:14px system-ui,Arial,sans-serif}.wrap{max-width:1120px;margin:auto;padding:16px}.head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:15px}.brand{display:flex;align-items:center;gap:11px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(140deg,#38c989,#17442e);display:grid;place-items:center;font-size:23px}h1{margin:0;color:var(--green);font-size:clamp(21px,4vw,29px);letter-spacing:.04em}.sub,.muted,.note{color:var(--muted)}.sub{font-size:11px;letter-spacing:.15em}.tag{border:1px solid var(--gold);color:var(--gold);border-radius:30px;padding:7px 10px;font-size:10px;font-weight:800;letter-spacing:.08em}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:13px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:15px;min-width:0}.s8{grid-column:span 8}.s4{grid-column:span 4}.s6{grid-column:span 6}.s12{grid-column:span 12}.eyebrow{font-size:10px;color:var(--muted);letter-spacing:.13em;font-weight:800}.price{font-size:28px;font-weight:850;margin:6px 0}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.chart{height:410px;margin-top:12px;border-radius:11px;overflow:hidden;background:#07110c}.chart iframe{width:100%;height:100%;border:0}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.tabs button,.secondary{background:#203b2c;color:var(--txt);border:1px solid var(--line)}button{border:0;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer;background:var(--green);color:#062116}.tabs button.active{background:var(--green);color:#062116}.signal{border:1px solid var(--line);background:#0a1710;border-radius:13px;padding:14px;margin-top:12px}.signal h2{font-size:25px;margin:4px 0}.buy{color:var(--green)}.sell{color:var(--red)}.wait{color:var(--gold)}.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.level{background:#17291f;border-radius:10px;padding:10px}.level small{display:block;color:var(--muted);font-size:10px}.level b{display:block;margin-top:4px;font-size:16px}.tfgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.tf{padding:11px;background:#0b1811;border:1px solid var(--line);border-radius:10px}.tf b{display:block;margin-top:5px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}label{display:block;color:var(--muted);font-size:11px;margin-bottom:5px}input,select{width:100%;padding:11px;background:#09150f;color:var(--txt);border:1px solid var(--line);border-radius:9px}.wide{width:100%;margin-top:10px}.history{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px}.history th,.history td{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line)}.history th{color:var(--muted)}.note{font-size:11px;line-height:1.55}.notice{padding:12px;border:1px solid #66552a;background:#292414;border-radius:12px;color:#f0dfad}.footer{text-align:center;padding:20px;color:var(--muted);font-size:10px}
+@media(max-width:760px){.s8,.s4,.s6{grid-column:span 12}.chart{height:360px}.tfgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:380px){.levels{grid-template-columns:1fr}.controls{grid-template-columns:1fr}}
+</style></head>
+<body><main class="wrap">
+<header class="head"><div class="brand"><div class="logo">✦</div><div><h1>PAJRIN GOLD AI</h1><div class="sub">XAUUSD · MULTI-TIMEFRAME SIGNAL TERMINAL</div></div></div><div class="tag">PAPER / SIMULATION ONLY</div></header>
+<div class="grid">
+<section class="card s8">
+ <div class="row"><div><div class="eyebrow">INSTRUMEN</div><div class="price">GOLD · XAUUSD</div></div><div class="muted" id="clock">Memuat waktu…</div></div>
+ <div class="chart"><iframe title="TradingView XAUUSD" src="https://www.tradingview.com/widgetembed/?symbol=OANDA%3AXAUUSD&interval=5&theme=dark&style=1&locale=id&timezone=Asia%2FJakarta&hide_side_toolbar=0&allow_symbol_change=1&saveimage=0&details=1&hotlist=0&calendar=0" loading="lazy"></iframe></div>
+ <div class="tabs" id="chartTabs"><button class="active" data-tf="5">M5</button><button data-tf="15">M15</button><button data-tf="60">H1</button><button data-tf="240">H4</button></div>
+ <p class="note">Grafik ditampilkan dari widget TradingView. Widget ini tidak memberikan akses data candle ke mesin sinyal pada halaman ini.</p>
+</section>
+<section class="card s4">
+ <div class="eyebrow">MESIN SINYAL DEMO</div><h2 style="margin:7px 0">Analisis latihan</h2>
+ <p class="note">Gunakan tombol untuk membuat contoh sinyal dari data harga simulasi. Bukan analisis harga live.</p>
+ <div class="signal" id="signal"><div class="eyebrow">STATUS SINYAL</div><h2 class="wait">MENUNGGU</h2><div class="note">Tekan “Jalankan simulasi” untuk melihat contoh format sinyal.</div></div>
+ <button class="wide" id="run">JALANKAN SIMULASI</button>
+ <button class="wide secondary" id="notify">AKTIFKAN NOTIFIKASI</button>
+ <p class="note" id="notifyStatus">Notifikasi browser memerlukan izin pengguna dan dukungan browser.</p>
+</section>
+<section class="card s6">
+ <div class="eyebrow">RINGKASAN MULTI-TIMEFRAME</div><h3 style="margin:7px 0">Konfirmasi tren (demo)</h3>
+ <div class="tfgrid" id="tfgrid"><div class="tf"><span class="muted">M5</span><b>—</b></div><div class="tf"><span class="muted">M15</span><b>—</b></div><div class="tf"><span class="muted">H1</span><b>—</b></div><div class="tf"><span class="muted">H4</span><b>—</b></div></div>
+ <p class="note">Label timeframe di sini adalah ilustrasi simulasi; belum dihitung dari candle pasar.</p>
+</section>
+<section class="card s6">
+ <div class="eyebrow">PARAMETER SIMULASI</div><h3 style="margin:7px 0">Pengaturan level</h3>
+ <div class="controls"><div><label for="ref">Harga referensi contoh</label><input id="ref" type="number" step=".01" placeholder="Contoh 2350.00"></div><div><label for="risk">Jarak SL (USD)</label><select id="risk"><option>2</option><option selected>3</option><option>5</option></select></div></div>
+ <p class="note">Entry, SL, dan TP dihitung secara matematis dari harga yang dimasukkan. Tidak memprediksi pasar.</p>
+</section>
+<section class="card s12">
+ <div class="row"><div><div class="eyebrow">JURNAL SINYAL</div><h3 style="margin:5px 0">Riwayat simulasi</h3></div><button class="secondary" id="clear" style="width:auto">HAPUS RIWAYAT</button></div>
+ <table class="history"><thead><tr><th>WAKTU</th><th>TF</th><th>SINYAL</th><th>ENTRY</th><th>SL</th><th>TP</th></tr></thead><tbody id="history"><tr><td colspan="6" class="muted">Belum ada simulasi.</td></tr></tbody></table>
+</section>
+<section class="card s12"><div class="notice"><b>PENTING — STATUS PEMBANGUNAN</b><br>Versi ini adalah prototipe simulasi, bukan bot sinyal live. TradingView embed hanya menampilkan chart; ia tidak mengirim data candle ke aplikasi. Agar sinyal otomatis live dapat dibuat, perlu dipilih penyedia data XAUUSD/API yang memiliki izin, lalu dibuat backend untuk menghitung indikator dan mengirim hasilnya. Jangan gunakan sinyal demo untuk trading sungguhan.</div></section>
+</div><div class="footer">PAJRIN GOLD AI · EDUCATIONAL PAPER-SIGNAL PROTOTYPE · NO AUTO-TRADING</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);let activeTf='5',history=[];
+function tick(){$('clock').textContent=new Date().toLocaleString('id-ID',{timeZone:'Asia/Jakarta',dateStyle:'medium',timeStyle:'medium'})}tick();setInterval(tick,1000);
+document.querySelectorAll('#chartTabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#chartTabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeTf=b.dataset.tf;const iframe=document.querySelector('.chart iframe');const u=new URL(iframe.src);u.searchParams.set('interval',activeTf);iframe.src=u.toString()}));
+function run(){
+ const entry=Number($('ref').value),gap=Number($('risk').value);
+ if(!Number.isFinite(entry)||entry<=0){$('signal').innerHTML='<div class="eyebrow">STATUS SINYAL</div><h2 class="wait">INPUT DIPERLUKAN</h2><div class="note">Masukkan harga referensi contoh terlebih dahulu.</div>';return}
+ // Deliberately deterministic demo label; no market data or predictive claim.
+ const dirs=['BUY','SELL','WAIT'];const dir=dirs[Math.floor(Math.random()*dirs.length)];
+ const sl=dir==='BUY'?entry-gap:dir==='SELL'?entry+gap:null,tp=dir==='BUY'?entry+gap*2:dir==='SELL'?entry-gap*2:null;
+ const cls=dir==='BUY'?'buy':dir==='SELL'?'sell':'wait';
+ $('signal').innerHTML='<div class="eyebrow">HASIL SIMULASI · BUKAN SINYAL LIVE</div><h2 class="'+cls+'">'+dir+'</h2><div class="note">Label acak untuk demo antarmuka; bukan hasil analisis teknikal.</div>'+(dir==='WAIT'?'':'<div class="levels"><div class="level"><small>ENTRY CONTOH</small><b>'+entry.toFixed(2)+'</b></div><div class="level"><small>SL CONTOH</small><b>'+sl.toFixed(2)+'</b></div><div class="level"><small>TP CONTOH</small><b>'+tp.toFixed(2)+'</b></div></div>');
+ const tfNames=['M5','M15','H1','H4'];$('tfgrid').innerHTML=tfNames.map((tf,i)=>'<div class="tf"><span class="muted">'+tf+'</span><b class="'+(i%2===0?'buy':'wait')+'">'+(dir==='WAIT'?'NETRAL':(i<2?dir:'KONFLIK'))+'</b></div>').join('');
+ history.unshift({time:new Date().toLocaleTimeString('id-ID'),tf:'M5',dir,entry:entry.toFixed(2),sl:sl===null?'—':sl.toFixed(2),tp:tp===null?'—':tp.toFixed(2)});history=history.slice(0,12);renderHistory();
+ if(Notification.permission==='granted')new Notification('PAJRIN GOLD AI · SIMULASI',{body:'Demo: '+dir+' · XAUUSD · bukan sinyal live'});
+}
+function renderHistory(){$('history').innerHTML=history.length?history.map(x=>'<tr><td>'+x.time+'</td><td>'+x.tf+'</td><td class="'+(x.dir==='BUY'?'buy':x.dir==='SELL'?'sell':'wait')+'">'+x.dir+'</td><td>'+x.entry+'</td><td>'+x.sl+'</td><td>'+x.tp+'</td></tr>').join(''):'<tr><td colspan="6" class="muted">Belum ada simulasi.</td></tr>'}
+$('run').addEventListener('click',run);$('clear').addEventListener('click',()=>{history=[];renderHistory()});
+$('notify').addEventListener('click',async()=>{if(!('Notification'in window)){$('notifyStatus').textContent='Browser ini tidak mendukung notifikasi.';return}const p=await Notification.requestPermission();$('notifyStatus').textContent=p==='granted'?'Izin notifikasi aktif.':'Izin notifikasi tidak diberikan.'});
+</script></body></html>
